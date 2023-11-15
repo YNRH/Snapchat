@@ -10,6 +10,12 @@
 		A201CEFB2AFFF342004A4F27 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A201CEFA2AFFF342004A4F27 /* GoogleService-Info.plist */; };
 		A201CEFF2AFFF94D004A4F27 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = A201CEFE2AFFF94D004A4F27 /* GoogleSignIn */; };
 		A201CF012AFFF94D004A4F27 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A201CF002AFFF94D004A4F27 /* GoogleSignInSwift */; };
+		A262A1FC2B042E4C009D3D0C /* SnapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A262A1FB2B042E4C009D3D0C /* SnapsViewController.swift */; };
+		A262A1FE2B04347C009D3D0C /* ImagenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A262A1FD2B04347C009D3D0C /* ImagenViewController.swift */; };
+		A262A2012B043F8F009D3D0C /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = A262A2002B043F8F009D3D0C /* FirebaseDatabase */; };
+		A262A2032B043FA7009D3D0C /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = A262A2022B043FA7009D3D0C /* FirebaseStorage */; };
+		A262A2052B0448F7009D3D0C /* ElegirUsuarioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A262A2042B0448F7009D3D0C /* ElegirUsuarioViewController.swift */; };
+		A262A2092B044EAF009D3D0C /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = A262A2082B044EAF009D3D0C /* Usuario.swift */; };
 		A2821ECB2AFFDAC100F26957 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2821ECA2AFFDAC100F26957 /* AppDelegate.swift */; };
 		A2821ECD2AFFDAC100F26957 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2821ECC2AFFDAC100F26957 /* SceneDelegate.swift */; };
 		A2821ECF2AFFDAC100F26957 /* IniciarSesionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2821ECE2AFFDAC100F26957 /* IniciarSesionViewController.swift */; };
@@ -23,6 +29,10 @@
 
 /* Begin PBXFileReference section */
 		A201CEFA2AFFF342004A4F27 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A262A1FB2B042E4C009D3D0C /* SnapsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapsViewController.swift; sourceTree = "<group>"; };
+		A262A1FD2B04347C009D3D0C /* ImagenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagenViewController.swift; sourceTree = "<group>"; };
+		A262A2042B0448F7009D3D0C /* ElegirUsuarioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElegirUsuarioViewController.swift; sourceTree = "<group>"; };
+		A262A2082B044EAF009D3D0C /* Usuario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Usuario.swift; sourceTree = "<group>"; };
 		A2821EC72AFFDAC100F26957 /* YRojasSnapchat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YRojasSnapchat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2821ECA2AFFDAC100F26957 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A2821ECC2AFFDAC100F26957 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -38,9 +48,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A262A2012B043F8F009D3D0C /* FirebaseDatabase in Frameworks */,
 				A201CF012AFFF94D004A4F27 /* GoogleSignInSwift in Frameworks */,
 				A2821EE22AFFDDF600F26957 /* FirebaseAnalytics in Frameworks */,
 				A201CEFF2AFFF94D004A4F27 /* GoogleSignIn in Frameworks */,
+				A262A2032B043FA7009D3D0C /* FirebaseStorage in Frameworks */,
 				A2821EE62AFFDDF600F26957 /* FirebaseAuth in Frameworks */,
 				A2821EE42AFFDDF600F26957 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
 			);
@@ -49,11 +61,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A262A1FF2B043F8F009D3D0C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A262A2062B044E18009D3D0C /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				A262A1FD2B04347C009D3D0C /* ImagenViewController.swift */,
+				A2821ECE2AFFDAC100F26957 /* IniciarSesionViewController.swift */,
+				A262A1FB2B042E4C009D3D0C /* SnapsViewController.swift */,
+				A262A2042B0448F7009D3D0C /* ElegirUsuarioViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		A262A2072B044E7B009D3D0C /* Modelos */ = {
+			isa = PBXGroup;
+			children = (
+				A262A2082B044EAF009D3D0C /* Usuario.swift */,
+			);
+			path = Modelos;
+			sourceTree = "<group>";
+		};
 		A2821EBE2AFFDAC100F26957 = {
 			isa = PBXGroup;
 			children = (
 				A2821EC92AFFDAC100F26957 /* YRojasSnapchat */,
 				A2821EC82AFFDAC100F26957 /* Products */,
+				A262A1FF2B043F8F009D3D0C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -68,9 +107,10 @@
 		A2821EC92AFFDAC100F26957 /* YRojasSnapchat */ = {
 			isa = PBXGroup;
 			children = (
+				A262A2072B044E7B009D3D0C /* Modelos */,
+				A262A2062B044E18009D3D0C /* ViewControllers */,
 				A2821ECA2AFFDAC100F26957 /* AppDelegate.swift */,
 				A2821ECC2AFFDAC100F26957 /* SceneDelegate.swift */,
-				A2821ECE2AFFDAC100F26957 /* IniciarSesionViewController.swift */,
 				A2821ED02AFFDAC100F26957 /* Main.storyboard */,
 				A2821ED32AFFDAC200F26957 /* Assets.xcassets */,
 				A2821ED52AFFDAC200F26957 /* LaunchScreen.storyboard */,
@@ -102,6 +142,8 @@
 				A2821EE52AFFDDF600F26957 /* FirebaseAuth */,
 				A201CEFE2AFFF94D004A4F27 /* GoogleSignIn */,
 				A201CF002AFFF94D004A4F27 /* GoogleSignInSwift */,
+				A262A2002B043F8F009D3D0C /* FirebaseDatabase */,
+				A262A2022B043FA7009D3D0C /* FirebaseStorage */,
 			);
 			productName = YRojasSnapchat;
 			productReference = A2821EC72AFFDAC100F26957 /* YRojasSnapchat.app */;
@@ -164,9 +206,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A262A1FC2B042E4C009D3D0C /* SnapsViewController.swift in Sources */,
+				A262A1FE2B04347C009D3D0C /* ImagenViewController.swift in Sources */,
+				A262A2092B044EAF009D3D0C /* Usuario.swift in Sources */,
 				A2821ECF2AFFDAC100F26957 /* IniciarSesionViewController.swift in Sources */,
 				A2821ECB2AFFDAC100F26957 /* AppDelegate.swift in Sources */,
 				A2821ECD2AFFDAC100F26957 /* SceneDelegate.swift in Sources */,
+				A262A2052B0448F7009D3D0C /* ElegirUsuarioViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,6 +466,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = A201CEFD2AFFF94D004A4F27 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
 			productName = GoogleSignInSwift;
+		};
+		A262A2002B043F8F009D3D0C /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A2821EE02AFFDDF600F26957 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		A262A2022B043FA7009D3D0C /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A2821EE02AFFDDF600F26957 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
 		};
 		A2821EE12AFFDDF600F26957 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
