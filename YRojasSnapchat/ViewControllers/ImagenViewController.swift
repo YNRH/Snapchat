@@ -31,6 +31,15 @@ class ImagenViewController: UIViewController, UIImagePickerControllerDelegate, U
         imagePicker.allowsEditing = false
         present(imagePicker, animated: true, completion: nil)
     }
+    
+    @IBAction func mediaTapped(_ sender: Any) {
+        
+        imagePicker.sourceType = .savedPhotosAlbum
+        imagePicker.allowsEditing = false
+        present(imagePicker, animated: true, completion: nil)
+    }
+    
+    
     @IBAction func elegirContactoTapped(_ sender: Any) {
         
         self.elegirContactoBoton.isEnabled = false

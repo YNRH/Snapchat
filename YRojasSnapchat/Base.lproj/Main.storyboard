@@ -349,7 +349,11 @@
                                     <action selector="camaraTapped:" destination="zv3-IP-xzB" id="bTZ-ON-af3"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem title="Item" id="dzi-Tj-d7X"/>
+                            <barButtonItem systemItem="organize" id="dzi-Tj-d7X">
+                                <connections>
+                                    <action selector="mediaTapped:" destination="zv3-IP-xzB" id="tyI-3w-v6U"/>
+                                </connections>
+                            </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
