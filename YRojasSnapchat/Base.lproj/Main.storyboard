@@ -228,6 +228,24 @@
                                     <constraint firstAttribute="height" constant="240" id="MiH-Pm-Dfw"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7sc-B3-ki3">
+                                <rect key="frame" x="23" y="572" width="116" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="systemGreenColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="record.circle.fill" catalog="system" title="Reproducir"/>
+                                <connections>
+                                    <action selector="grabarTapped:" destination="zv3-IP-xzB" eventType="touchUpInside" id="HnY-3i-ETc"/>
+                                    <action selector="reproducirTapped:" destination="Xba-OW-A28" eventType="touchUpInside" id="2NE-Kf-zWV"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Audio Enviado:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aVj-Ky-EgE">
+                                <rect key="frame" x="20" y="521" width="394" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Ti5-aL-jBG"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -247,6 +265,7 @@
                     <connections>
                         <outlet property="imageView" destination="1Nf-CG-vDb" id="Skm-rQ-6T3"/>
                         <outlet property="lblMensaje" destination="OV3-xp-rIx" id="Pvd-Ih-Zg5"/>
+                        <outlet property="reproducirButton" destination="7sc-B3-ki3" id="H8D-qa-2sw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pHI-HH-Ros" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -317,8 +336,9 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SvE-br-UQQ">
-                                <rect key="frame" x="87" y="305" width="240" height="31"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SvE-br-UQQ">
+                                <rect key="frame" x="149" y="433" width="117" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" systemColor="opaqueSeparatorColor"/>
                                 <state key="normal" title="Button"/>
@@ -327,16 +347,23 @@
                                     <action selector="elegirContactoTapped:" destination="zv3-IP-xzB" eventType="touchUpInside" id="0xi-o1-PGl"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uu2-uS-hSF">
+                                <rect key="frame" x="138" y="317" width="90" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="systemGreenColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="record.circle.fill" catalog="system" title="Grabar"/>
+                                <connections>
+                                    <action selector="grabarTapped:" destination="zv3-IP-xzB" eventType="touchUpInside" id="5Xo-Pm-u5j"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="DNp-iI-ztQ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="0tg-ma-cej" firstAttribute="width" secondItem="CNm-3v-g1o" secondAttribute="width" id="6Yt-wB-hQU"/>
-                            <constraint firstItem="SvE-br-UQQ" firstAttribute="top" secondItem="CNm-3v-g1o" secondAttribute="bottom" constant="20" id="6Zg-uw-LPe"/>
                             <constraint firstItem="CNm-3v-g1o" firstAttribute="centerX" secondItem="DNp-iI-ztQ" secondAttribute="centerX" id="R2I-p0-nM0"/>
                             <constraint firstItem="0tg-ma-cej" firstAttribute="centerX" secondItem="vdZ-h8-2US" secondAttribute="centerX" id="Wop-eC-m4T"/>
-                            <constraint firstItem="CNm-3v-g1o" firstAttribute="width" secondItem="SvE-br-UQQ" secondAttribute="width" id="cBA-Vl-udb"/>
-                            <constraint firstItem="CNm-3v-g1o" firstAttribute="centerX" secondItem="SvE-br-UQQ" secondAttribute="centerX" id="fVw-0r-GO0"/>
                             <constraint firstItem="0tg-ma-cej" firstAttribute="top" secondItem="DNp-iI-ztQ" secondAttribute="top" constant="20" id="rQa-kw-S3U"/>
                             <constraint firstItem="CNm-3v-g1o" firstAttribute="top" secondItem="0tg-ma-cej" secondAttribute="bottom" constant="15" id="tXw-qg-jIe"/>
                         </constraints>
@@ -359,6 +386,7 @@
                     <connections>
                         <outlet property="descripcionTextField" destination="CNm-3v-g1o" id="FHe-0w-VKd"/>
                         <outlet property="elegirContactoBoton" destination="SvE-br-UQQ" id="U9T-oG-0R7"/>
+                        <outlet property="grabarButton" destination="Uu2-uS-hSF" id="KZK-Al-NeJ"/>
                         <outlet property="imageView" destination="0tg-ma-cej" id="5Ya-5F-hao"/>
                         <segue destination="i3Q-nE-V6m" kind="show" identifier="seleccionarContactoSegue" id="QOH-FY-zLl"/>
                     </connections>
@@ -419,6 +447,7 @@
     </scenes>
     <resources>
         <image name="img" width="512" height="512"/>
+        <image name="record.circle.fill" catalog="system" width="128" height="121"/>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

@@ -43,8 +43,26 @@ class CrearUsuarioViewController: UIViewController {
                 print("Usuario creado exitosamente")
                 // Notificar al usuario que se creó exitosamente
                 self?.mostrarAlertaExitosa()
+
+                // Guardar el correo electrónico en la base de datos
+                if let user = user {
+                    let email = user.user.email ?? "" // Obtener el correo electrónico del usuario
+                    let userID = user.user.uid // Obtener el UID del usuario
+                    
+                    let databaseRef = Database.database().reference().child("usuarios").child(userID).child("email")
+                    databaseRef.setValue(email) { (error, ref) in
+                        if let error = error {
+                            print("Error al guardar el correo electrónico: \(error.localizedDescription)")
+                            // Manejar el error al guardar en la base de datos si es necesario
+                        } else {
+                            print("Correo electrónico guardado en la base de datos correctamente")
+                            // Puedes realizar acciones adicionales después de guardar en la base de datos si es necesario
+                        }
+                    }
+                }
             }
         }
+
     }
     
     func mostrarAlerta(mensaje: String) {
